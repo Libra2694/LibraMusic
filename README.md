@@ -13,10 +13,10 @@
 ### 🌟 Fitur Utama
 1. **🚫 100% Bebas Iklan (Ad-Free Experience):** Nikmati musik tanpa jeda iklan audio maupun pop-up banner komersial yang mengganggu.
 2. **🎧 Background Playback & Lock Screen Controls:** Musik tetap berputar mulus tanpa terputus saat membuka aplikasi lain atau saat layar ponsel dimatikan, lengkap dengan notifikasi kontrol media native Android.
-3. **📜 Lirik Real-Time Sinkron (Karaoke Mode):** Integrasi lirik sinkron otomatis per detik dari open-source database LRCLIB dengan auto-scroll dan penyorotan baris aktif.
+3. **📜 Lirik Real-Time Sinkron (Karaoke Mode):** Integrasi lirik sinkron otomatis per detik dari layanan database lirik terintegrasi dengan auto-scroll dan penyorotan baris aktif.
 4. **🎨 Desain Deep Obsidian (Anti-Carditis UI):** Antarmuka gelap alami yang mewah dengan aksen *Emerald Glow*, nyaman untuk mata dan hemat konsumsi baterai layar AMOLED.
 5. **💾 Offline Storage & Smart Cache:** Lagu favorit, riwayat putar, dan antrean tersimpan secara aman dan instan di penyimpanan lokal perangkat tanpa perlu registrasi akun.
-6. **🐞 Lapor Masalah & Masukan In-App:** Formulir terintegrasi langsung via EmailJS untuk menyampaikan kendala pemutaran, request lagu, atau saran fitur ke tim pengembang.
+6. **🐞 Lapor Masalah & Masukan In-App:** Formulir terintegrasi langsung ke email pengembang untuk menyampaikan kendala pemutaran, request lagu, atau saran fitur.
 7. **☕ Dukungan Pengembang:** Dukung keberlanjutan pengembangan aplikasi langsung lewat Saweria (QRIS / E-Wallet).
 
 ---
@@ -28,10 +28,10 @@
 ### 🌟 Core Features
 1. **🚫 100% Ad-Free:** Zero audio interruptions, banners, or commercial trackers.
 2. **🎧 Background Playback & Native Media Notifications:** Uninterrupted audio playback with lock screen controls and system media session integration.
-3. **📜 Real-Time Synced Lyrics:** Karaoke-style lyrics synchronized word-by-word/second-by-second powered by LRCLIB.
+3. **📜 Real-Time Synced Lyrics:** Karaoke-style lyrics synchronized word-by-word/second-by-second powered by an integrated lyrics synchronization engine.
 4. **🎨 Deep Obsidian Dark Theme:** Eye-pleasing, battery-friendly dark aesthetic with vibrant Emerald Glow accents.
 5. **💾 Local-First Persistence:** Your favorite playlists, history, and cache are preserved locally on-device without requiring account sign-ins.
-6. **🐞 In-App Feedback & Bug Reporting:** Native feedback modal communicating directly with developer inboxes via EmailJS REST API.
+6. **🐞 In-App Feedback & Bug Reporting:** Native feedback modal communicating directly with developer inboxes via a secure direct-to-email API.
 7. **☕ Community Support:** Support future development directly via Saweria (QRIS / Indonesian E-Wallets).
 
 ---
@@ -53,11 +53,11 @@
 ```mermaid
 graph TD
     A[Flutter UI Layer - Deep Obsidian] --> B[State & Service Controllers]
-    B --> C[Background Audio Service - just_audio / audio_service]
-    B --> D[Invidious & YouTube Explode Audio Stream]
-    B --> E[LRCLIB Synced Lyrics API]
-    B --> F[Local SharedPreferences Storage - Favorites & History]
-    B --> G[EmailJS REST API - Bug Report & Feedback]
+    B --> C[Background Audio Service]
+    B --> D[Cloud Audio Streaming Engine]
+    B --> E[Synced Lyrics Engine]
+    B --> F[Local Persistent Storage]
+    B --> G[Direct Feedback Service]
     C --> H[Android Native Notification & MediaSession]
     
     style A fill:#00E676,stroke:#111,stroke-width:2px,color:#000
@@ -67,12 +67,12 @@ graph TD
 ```
 
 *   **UI Framework:** [Flutter](https://flutter.dev) (Dart 3)
-*   **Audio Engine:** `just_audio`, `audio_service`, `audio_session` (Native Android foreground service & lock screen notification)
-*   **Stream & Search Engine:** Decentralized Invidious API & YouTube Explode
-*   **Lyrics Provider:** [LRCLIB](https://lrclib.net) (Open-source synchronized lyrics database)
-*   **Local Storage:** `shared_preferences` (Offline favorites, history, and theme settings)
-*   **Networking & Feedback:** `http` + [EmailJS](https://www.emailjs.com/) REST API
-*   **Image Caching:** `cached_network_image`
+*   **Audio Engine:** Native Android Background Audio Service & MediaSession
+*   **Stream & Search Engine:** Cloud Audio Streaming & Search API
+*   **Lyrics Provider:** Real-Time Synchronized Lyrics Engine
+*   **Local Storage:** On-device Persistent Storage (Favorites, History, & Preferences)
+*   **Networking & Feedback:** Secure HTTPS REST API & Direct Feedback Service
+*   **Image Caching:** Smart Local Artwork Cache
 
 ---
 
