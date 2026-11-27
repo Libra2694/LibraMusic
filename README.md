@@ -42,9 +42,13 @@
 > **Tampilan Nyata Aplikasi di Perangkat Android:**
 > Tangkapan layar antarmuka Libra Music dalam mode gelap Deep Obsidian.
 
-| Player & Lyrics | Pengaturan & Fitur | Lapor Kendala In-App | Dukung Pengembang |
+| Splash Screen | Beranda (Home) | Eksplor Genre | Player & Lirik |
 | :---: | :---: | :---: | :---: |
-| ![Player](assets/screenshots/player.png) | ![Settings](assets/screenshots/settings.jpg) | ![Report Bug](assets/screenshots/report_bug.png) | ![Support Modal](assets/screenshots/support_modal.jpg) |
+| ![Splash](assets/screenshots/splash.jpg) | ![Beranda](assets/screenshots/home.jpg) | ![Eksplor](assets/screenshots/explore.jpg) | ![Player](assets/screenshots/player.png) |
+
+| Koleksi Favorit | Pengaturan | Lapor Kendala | Tentang & Support |
+| :---: | :---: | :---: | :---: |
+| ![Koleksi](assets/screenshots/collection.jpg) | ![Settings](assets/screenshots/settings.jpg) | ![Report Bug](assets/screenshots/report_bug.png) | ![About](assets/screenshots/about.jpg) |
 
 ---
 
